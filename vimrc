@@ -1,4 +1,7 @@
-call pathogen#incubate()
+runtime bundle/pathogen/autoload/pathogen.vim
+
+call pathogen#infect()
+call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 
 set hidden
