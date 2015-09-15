@@ -17,6 +17,10 @@ if has("autocmd")
     au FileType python setlocal expandtab shiftwidth=4 softtabstop=4 colorcolumn=80 ai nu nowrap cul
 endif
 
+" ---------- folding config section -----------
+"" toggle all fold levels
+map <F9> zi
+
 " ---------- NERDTree config section ----------
 " Map CTRL-n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
