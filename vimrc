@@ -28,6 +28,10 @@ map <C-n> :NERDTreeToggle<CR>
 " Close vim if the only window left
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" ---------- Solarized colorscheme stuff ----------
+let g:solarized_termcolors=256
+
+set laststatus=2
 syntax enable
 set background=dark
 colorscheme solarized
