@@ -10,9 +10,6 @@
 [submodule "bundle/colors-lucius"]
 	path = bundle/colors-lucius
 	url = https://github.com/jonathanfilip/vim-lucius
-[submodule "bundle/snipmate.vim"]
-	path = bundle/snipmate.vim
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
