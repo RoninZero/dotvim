@@ -18,7 +18,7 @@ set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 "set wildignore=*.swp,*.bak,*.pyc,*.class "What does this do?
 set title                " change the terminal's title
-let mapleader='\'
+"let mapleader='\'
 set pastetoggle=<F2>     " Toggle paste mode
 " toggle unprintable chars and newlines and report state
 nnoremap <F3> :set list! list?<CR>
@@ -35,7 +35,7 @@ set vb t_vb=            " disable bell and turn off visual bell
 set ts=4 sts=4 sw=2 expandtab
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>ev :new $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 if has("autocmd")
