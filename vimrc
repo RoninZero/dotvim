@@ -100,3 +100,12 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" ------------- My Functions and Macros ------------
+" function to trim trailing white space
+function TrimWhiteSpace()
+  %s/\s*$//
+  ''  
+:endfunction
+
+map <F12> :call TrimWhiteSpace()<CR>
+map! <F12> :call TrimWhiteSpace()<CR>
