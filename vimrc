@@ -28,8 +28,7 @@ nmap <F4> :set number! number?<CR>
 " Change the listchars (:help listchars to show hidden chars when running :set list
 " set listchars=tab:▸\ ,eol:¬       " show tabs and EOL
 " set list lcs=trail:·,tab:»·
-set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\      
-       
+set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 
 set vb t_vb=            " disable bell and turn off visual bell
 set ts=4 sts=4 sw=2 expandtab
@@ -104,7 +103,7 @@ colorscheme solarized
 " function to trim trailing white space
 function TrimWhiteSpace()
   %s/\s*$//
-  ''  
+  ''
 :endfunction
 
 map <F12> :call TrimWhiteSpace()<CR>
