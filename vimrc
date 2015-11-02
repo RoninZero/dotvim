@@ -17,7 +17,7 @@ set smartcase            " ignore case if search pattern is all lowercase,
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 "set wildignore=*.swp,*.bak,*.pyc,*.class "What does this do?
-set title                " change the terminal's title
+"set title                " change the terminal's title
 "let mapleader='\'
 set pastetoggle=<F2>     " Toggle paste mode
 " toggle unprintable chars and newlines and report state
