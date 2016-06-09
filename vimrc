@@ -42,6 +42,10 @@ if has("autocmd")
     set autoindent
     set foldmethod=indent
     au FileType python setlocal expandtab shiftwidth=4 softtabstop=4 colorcolumn=80 ai nu nowrap cul
+    au FileType puppet setlocal expandtab shiftwidth=2 softtabstop=2 colorcolumn=140 ai nu nowrap cul |
+        \ let g:syntastic_puppet_puppetlint_args = "--no-80chars-check --no-autoloader_layout-check --no-2sp_soft_tabs-check --no-ensure_first_param-check"
+        " The previous line is needed to disable some checks in syntastic's puppet-lint checker. run `puppet-lint --help`
+        " to see checks and options
 endif
 
 " ---------- folding config section -----------
@@ -98,6 +102,12 @@ set laststatus=2
 syntax enable
 set background=dark
 colorscheme solarized
+
+" ---------- syntastic stuff ----------
+" disable style warnings | TODO later make this a toggle
+let g:syntastic_quiet_messages = { "type": "style" }
+let g:syntastic_error_symbol = "✗" 
+let g:syntastic_warning_symbol = "⚠" 
 
 " ------------- My Functions and Macros ------------
 " function to trim trailing white space
