@@ -1,11 +1,50 @@
 " muttrc
 " default leader key is '\'
-runtime bundle/pathogen/autoload/pathogen.vim
+" runtime bundle/pathogen/autoload/pathogen.vim
 
-call pathogen#infect()
-call pathogen#infect('bundle/{}')
-call pathogen#helptags()
+" call pathogen#infect()
+" call pathogen#infect('bundle/{}')
+" call pathogen#helptags()
 
+call plug#begin('~/.vim/plugged')
+
+" my plugins
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-pathogen'
+Plug 'scrooloose/syntastic'
+Plug 'godlygeek/tabular'
+Plug 'ricciocri/vim-puppet'
+Plug 'plasticboy/vim-markdown'
+Plug 'tomtom/tcomment_vim'
+Plug 'bling/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+" colorschemes
+"Plug 'altercation/vim-colors-solarized', { 'set': 'all' }
+"Plug 'jonathanfilip/vim-lucius', { 'set': 'all' }'
+Plug 'altercation/vim-colors-solarized'
+Plug 'jonathanfilip/vim-lucius'
+
+call plug#end()
+
+
+" The next line ensures that the autocomplete window goes away when you’re 
+" done with it, and the latter defines a shortcut for goto definition.
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
 
 " default settings
 set nocompatible
