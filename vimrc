@@ -1,10 +1,5 @@
 " muttrc
 " default leader key is '\'
-" runtime bundle/pathogen/autoload/pathogen.vim
-
-" call pathogen#infect()
-" call pathogen#infect('bundle/{}')
-" call pathogen#helptags()
 
 call plug#begin('~/.vim/plugged')
 
