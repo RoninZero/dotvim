@@ -145,8 +145,12 @@ colorscheme solarized
 " ---------- syntastic stuff ----------
 " disable style warnings | TODO later make this a toggle
 let g:syntastic_quiet_messages = { "type": "style" }
-let g:syntastic_error_symbol = "✗" 
-let g:syntastic_warning_symbol = "⚠" 
+"
+" disable eruby message about unused variables
+let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a variable in void context'}
+"
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
 
 " ------------- My Functions and Macros ------------
 " function to trim trailing white space
