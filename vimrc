@@ -131,6 +131,8 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 " ---------- Solarized colorscheme stuff ----------
 let g:solarized_termcolors=256
+" the following line may be needed to fix wierd transparent terminal solarized issues in vim
+let g:solarized_termtrans=1
 
 set laststatus=2
 syntax enable
