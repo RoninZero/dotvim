@@ -156,5 +156,18 @@ function TrimWhiteSpace()
   ''
 :endfunction
 
+" function to convert tabs to spaces 
+" -- then --
+" convert multiple spaces to a single space
+function ConvertMultiTabSpace2Single()
+  %s/\t/ /g
+  %s/  \+/ /g
+  ''
+:endfunction
+
+
 map <F12> :call TrimWhiteSpace()<CR>
 map! <F12> :call TrimWhiteSpace()<CR>
+
+map <C-\> :call ConvertMultiTabSpace2Single()<CR>
+map! <C-\> :call ConvertMultiTabSpace2Single()<CR>
