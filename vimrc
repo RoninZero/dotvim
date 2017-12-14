@@ -165,9 +165,21 @@ function ConvertMultiTabSpace2Single()
   ''
 :endfunction
 
+" Function to toggle between line numbers and relative line numbers
+function NumberToggle()
+  if(&number == 1)
+    set number!
+    set relativenumber
+  else
+    set norelativenumber
+    set number
+  endif
+endfunction
 
 map <F12> :call TrimWhiteSpace()<CR>
 map! <F12> :call TrimWhiteSpace()<CR>
 
 map <C-\> :call ConvertMultiTabSpace2Single()<CR>
 map! <C-\> :call ConvertMultiTabSpace2Single()<CR>
+
+nnoremap <F5> :call NumberToggle()<CR>
