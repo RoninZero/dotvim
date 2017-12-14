@@ -54,6 +54,8 @@ set undolevels=1000      " use many muchos levels of undo
 "set title                " change the terminal's title
 "let mapleader='\'
 set pastetoggle=<F2>     " Toggle paste mode
+set scrolloff=10         " minimum number of lines above and below cursor when scrolling
+
 " toggle unprintable chars and newlines and report state
 nnoremap <F3> :set list! list?<CR>
 " toggle line numbers and report state
