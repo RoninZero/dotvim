@@ -79,7 +79,7 @@ if has("autocmd")
     set foldmethod=indent
     au FileType python setlocal expandtab shiftwidth=4 softtabstop=4 colorcolumn=80 ai nu nowrap cul
     au FileType puppet setlocal expandtab shiftwidth=2 softtabstop=2 colorcolumn=140 ai nu nowrap cul |
-        \ let g:syntastic_puppet_puppetlint_args = "--no-80chars-check --no-autoloader_layout-check --no-2sp_soft_tabs-check --no-ensure_first_param-check"
+        \ let g:syntastic_puppet_puppetlint_args = "--no-80chars-check --no-autoloader_layout-check --no-2sp_soft_tabs-check --no-ensure_first_param-check --no-documentation-check"
         " The previous line is needed to disable some checks in syntastic's puppet-lint checker. run `puppet-lint --help`
         " to see checks and options
 endif
