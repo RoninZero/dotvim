@@ -151,6 +151,9 @@ let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 
+"
+map <F8> :SyntasticCheck<CR>
+
 " ------------- My Functions and Macros ------------
 " function to trim trailing white space
 function TrimWhiteSpace()
